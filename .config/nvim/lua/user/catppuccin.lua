@@ -1,0 +1,52 @@
+-- require("catppuccin").setup({
+-- 	transparent_background = false,
+-- 	term_colors = false,
+-- 	compile = {
+-- 		enabled = false,
+-- 		path = vim.fn.stdpath("cache") .. "/catppuccin",
+-- 	},
+-- 	dim_inactive = {
+-- 		enabled = false,
+-- 		shade = "dark",
+-- 		percentage = 0.15,
+-- 	},
+-- 	styles = {
+-- 		comments = { "italic" },
+-- 		conditionals = { "italic" },
+-- 		loops = {},
+-- 		functions = {},
+-- 		keywords = {},
+-- 		strings = {},
+-- 		variables = {},
+-- 		numbers = {},
+-- 		booleans = {},
+-- 		properties = {},
+-- 		types = {},
+-- 		operators = {},
+-- 	},
+-- 	integrations = {
+-- 		gitgutter = true,
+-- 		treesitter = true,
+-- 		vimwiki = true,
+--     bufferline = true,
+--     native_lsp = {
+-- 			enabled = true,
+-- 			virtual_text = {
+-- 				errors = { "italic" },
+-- 				hints = { "italic" },
+-- 				warnings = { "italic" },
+-- 				information = { "italic" },
+--         },
+--         underlines = {
+--           errors = { "underline" },
+--           hints = { "underline" },
+--           warnings = { "underline" },
+--           information = { "underline" },
+--         },
+-- 		},
+-- 		-- For various plugins integrations see https://github.com/catppuccin/nvim#integrations
+-- 	},
+-- 	color_overrides = {},
+-- 	highlight_overrides = {},
+-- })
+--
