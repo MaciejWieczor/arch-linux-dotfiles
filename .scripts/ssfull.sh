@@ -1,5 +1,15 @@
 #!/bin/bash
-##ssfull script
+##ssarea script
 DATE=$(date +%Y-%m-%d-%H:%M:%S)
-gnome-screenshot -f /home/user/Downloads/Screenshot-$DATE.png -c
-xclip -selection clipboard -t image/png -i /home/maciej/Pictures/Screenshot-$DATE.png
+YEAR=$(date +%Y)
+MONTH=$(date +%m)
+DIRNAME="~/Pictures/${YEAR}/${MONTH}"
+FILENAME="${DIRNAME}/Screenshot-${DATE}.png"
+
+## makes dir if it doesn't exist
+mkdir -p $DIRNAME
+## take screenshot
+maim $FILENAME
+
+## copy file to clipboard
+xclip -selection clipboard -t image/png -i $FILENAME
