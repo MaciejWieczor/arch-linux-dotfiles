@@ -12,7 +12,8 @@
     "percent": 0.5,
     "swallows": [
        {
-        "title": "telegram_nchat"
+         "class": "^TelegramDesktop$",
+         "instance": "^telegram\\-desktop$"
        }
     ],
     "type": "con"

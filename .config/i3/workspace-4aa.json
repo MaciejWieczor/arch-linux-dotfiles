@@ -1,0 +1,76 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "rect": {
+       "height": 995,
+       "width": 968,
+       "x": 13,
+       "y": 42
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 5,
+            "floating": "user_on",
+            "geometry": {
+               "height": 1020,
+               "width": 935,
+               "x": 15,
+               "y": 45
+            },
+            "marks": [],
+            "name": "Telegram (2557)",
+            "percent": 1,
+            "swallows": [
+               {
+               "class": "^TelegramDesktop$",
+               "instance": "^telegram\\-desktop$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "rect": {
+       "height": 624,
+       "width": 898,
+       "x": 997,
+       "y": 43
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 5,
+            "floating": "user_on",
+            "geometry": {
+               "height": 1020,
+               "width": 935,
+               "x": 970,
+               "y": 45
+            },
+            "marks": [],
+            "name": "Messenger",
+            "percent": 1,
+            "swallows": [
+               {
+               "class": "^Caprine$",
+               "instance": "^caprine$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

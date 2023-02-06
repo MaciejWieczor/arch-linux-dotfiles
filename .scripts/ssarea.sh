@@ -3,7 +3,7 @@
 DATE=$(date +%Y-%m-%d-%H:%M:%S)
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
-DIRNAME="~/Pictures/${YEAR}/${MONTH}"
+DIRNAME="/home/maciej/Pictures/${YEAR}/${MONTH}"
 FILENAME="${DIRNAME}/Screenshot-${DATE}.png"
 
 ## makes dir if it doesn't exist

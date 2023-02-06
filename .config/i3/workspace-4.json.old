@@ -1,0 +1,44 @@
+{
+    "border": "pixel",
+    "current_border_width": 5,
+    "floating": "user_off",
+    "geometry": {
+       "height": 1020,
+       "width": 935,
+       "x": 15,
+       "y": 45
+    },
+    "marks": [],
+    "name": "Telegram",
+    "percent": 0.5,
+    "swallows": [
+       {
+               "class": "^TelegramDesktop$",
+               "instance": "^telegram\\-desktop$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 5,
+    "floating": "user_off",
+    "geometry": {
+       "height": 1020,
+       "width": 935,
+       "x": 970,
+       "y": 45
+    },
+    "marks": [],
+    "name": "Messenger",
+    "percent": 0.5,
+    "swallows": [
+       {
+               "class": "^Caprine$",
+               "instance": "^caprine$"
+       }
+    ],
+    "type": "con"
+}
+

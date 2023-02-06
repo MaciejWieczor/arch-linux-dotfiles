@@ -1,0 +1,41 @@
+{
+    "border": "pixel",
+    "current_border_width": 5,
+    "floating": "user_off",
+    "geometry": {
+       "height": 504,
+       "width": 640,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "btop",
+    "percent": 0.673958333333333,
+    "swallows": [
+       {
+        "title": "btop"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 5,
+    "floating": "user_off",
+    "geometry": {
+       "height": 504,
+       "width": 640,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "weather",
+    "percent": 0.326041666666667,
+    "swallows": [
+       {
+        "title": "weather"
+       }
+    ],
+    "type": "con"
+}
