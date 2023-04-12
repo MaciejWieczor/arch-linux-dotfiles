@@ -59,3 +59,4 @@ vim.cmd "set nocompatible"
 vim.cmd "let g:vimwiki_key_mappings = {}"
 vim.cmd "let g:vimwiki_key_mappings.table_mappings = 0"
 vim.cmd "set foldlevel=99" -- This opens all folds on file open
+vim.cmd "let g:airline_powerline_fonts = 1"

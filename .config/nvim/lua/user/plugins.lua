@@ -70,8 +70,12 @@ return packer.startup(function(use)
   use "kevinhwang91/rnvimr"
 
     -- Lualine
-  use "nvim-lualine/lualine.nvim"
+
   use "kdheepak/tabline.nvim"
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
     -- Marks
   use "chentoast/marks.nvim"
