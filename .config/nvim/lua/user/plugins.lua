@@ -61,7 +61,7 @@ return packer.startup(function(use)
 
     -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
     -- Colorizer
   use "norcalli/nvim-colorizer.lua"
@@ -75,34 +75,12 @@ return packer.startup(function(use)
 
     -- Marks
   use "chentoast/marks.nvim"
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
-  use "nvim-treesitter/playground"
-
-
-  -- Folding
-  use{ 'anuvyklack/pretty-fold.nvim',
-   config = function()
-      require('pretty-fold').setup()
-   end,
-  }
 
   use "emakman/neovim-latex-previewer"
-  use "vimwiki/vimwiki"
 
-  use "mhinz/vim-startify"
-
-  use "wfxr/code-minimap"
-  use "wfxr/minimap.vim"
   use "airblade/vim-gitgutter"
-  use "mzlogin/vim-markdown-toc"
 
-  use "preservim/nerdtree"
-
-  -- catpuccin mocha
+  use "nvim-treesitter/nvim-treesitter"
 
   use { "catppuccin/nvim", as = "catppuccin" }
 

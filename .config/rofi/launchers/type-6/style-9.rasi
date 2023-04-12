@@ -67,7 +67,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/Obrazy/catppuccin_3.jpg", height);
+    background-image:            url("~/Obrazy/wallpapers/3.png", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

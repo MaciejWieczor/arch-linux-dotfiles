@@ -61,6 +61,7 @@ bindcode $mod+107 exec "/home/maciej/.config/rofi/applets/bin/screenshot.sh"
 # Mod + p
 bindcode $mod+33 exec "/home/maciej/.config/rofi/powermenu/type-6/powermenu.sh"
 
+
 # lock screen
 # bindsym $mod+p exec "systemctl suspend"
 
@@ -163,7 +164,13 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+d exec feh --bg-fill ~/Obrazy/wallpapers/1.png
+# bindsym $mod+Shift+n exec feh --bg-fill ~/Obrazy/wallpapers/3.png
+# bindsym $mod+Shift+m exec feh --bg-fill ~/Obrazy/wallpapers/2.png
+bindsym $mod+mod1+1 exec feh --bg-fill ~/Obrazy/wallpapers/1.png
+bindsym $mod+mod1+2 exec feh --bg-fill ~/Obrazy/wallpapers/2.png
+bindsym $mod+mod1+3 exec feh --bg-fill ~/Obrazy/wallpapers/3.png
+bindsym $mod+mod1+4 exec feh --bg-fill ~/Obrazy/wallpapers/4.png
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -192,13 +199,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# force floating for all new windows
-#for_window [class="[.]*"] floating enable
-
 
 # force floating only for terminals
 
-exec --no-startup-id picom -CGb
+exec --no-startup-id picom
 
 exec_always ~/.config/polybar/launch.sh
 
@@ -208,17 +212,21 @@ gaps top 35
 
 # exec_always xrandr --output eDP1 --auto --output HDMI-1-0 --auto --left-of eDP1
 exec_always --no-startup-id x-on-resize --config ~/.config/i3/script.sh 
-exec feh --bg-fill ~/Obrazy/catppuccin_4.png
+exec feh --bg-fill ~/Obrazy/wallpapers/1.png
 
 # exec_always xwinwrap -g 1920x1080 -ov -ni -s -nf -- gifview -w WID ~/Pictures/blue_city2.gif -a
 # two screen version
 # exec_always xwinwrap -g 3840x1080 -ov -ni -s -nf -- gifview -w WID ~/Pictures/blue_city2.gif -a
 
 # screen locker - 5min (300s) to dim - 6min (+60s) to screensaver - 7 min (+60s) to suspend 
+# 5 min - nothing happening
+# 5 min - dimmed screen 
+# 10 min - screensaver 
+# then suspend
 exec_always xidlehook --not-when-audio \
                       --timer 300 'light -G > /home/maciej/.curlight ; light -S 10' 'cat ~/.curlight | xargs light -S' \
-                      --timer 60 'light -S 30 ;feh -Y -F /home/maciej/Obrazy/catppuccin_3.jpg' 'cat ~/.curlight | xargs light -S ; pgrep feh | xargs kill' \
-                      --timer 120 'cat /home/maciej/.curlight | xargs light -S' '' \
+                      --timer 300 'light -S 30 ;feh -Y -F /home/maciej/Obrazy/wallpapers/3.png' 'cat ~/.curlight | xargs light -S ; pgrep feh | xargs kill' \
+                      --timer 600 'cat /home/maciej/.curlight | xargs light -S' '' \
                       --timer 1 'systemctl suspend' '' \
                       --timer 1 'pgrep feh | xargs kill' ''
 
@@ -254,6 +262,7 @@ exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-
 exec --no-startup-id "i3-msg 'workspace 5; append_layout ~/.config/i3/workspace-5.json'"
 exec --no-startup-id "i3-msg 'workspace 6; append_layout ~/.config/i3/workspace-6.json'"
 exec --no-startup-id "i3-msg 'workspace 7; append_layout ~/.config/i3/workspace-7.json'"
+exec --no-startup-id "i3-msg 'workspace 8; append_layout ~/.config/i3/workspace-8.json'"
 
 exec --no-startup-id chromium
 
@@ -271,5 +280,11 @@ exec --no-startup-id i3-msg 'exec i3-sensible-terminal -title spotify_ncspot -ho
 exec --no-startup-id i3-msg 'exec i3-sensible-terminal -title cava -hold -e cava'
 
 exec --no-startup-id obsidian
+exec --no-startup-id kteatime
+
+exec --no-startup-id evince
 
 exec i3-msg 'workspace 1'
+
+# force floating for all new windows
+# for_window [class="[.]*"] floating enable

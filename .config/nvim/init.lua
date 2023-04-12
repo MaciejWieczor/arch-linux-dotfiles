@@ -12,10 +12,3 @@ require "user.catppuccin"
 vim.cmd [[colorscheme catppuccin]]
 
 require "user.treesitter"
-require "user.pretty-fold"
-require "user.vimwiki"
-require "user.startify"
-require "user.minimap"
-require "user.md_toc"
-
--- require "user.colorscheme"
