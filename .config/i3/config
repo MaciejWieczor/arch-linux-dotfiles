@@ -50,12 +50,13 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun -font 'roboto mono 12' -icon-theme 'Papirus' -show-icons"
+# Mod + d
 bindcode $mod+40 exec "/home/maciej/.config/rofi/launchers/type-6/launcher.sh"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-# Mod + 
+# Mod + prtscr
 bindcode $mod+107 exec "/home/maciej/.config/rofi/applets/bin/screenshot.sh"
 
 # Mod + p
