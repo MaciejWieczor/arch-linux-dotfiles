@@ -35,8 +35,15 @@ M.setup = function()
 
   vim.diagnostic.config(config)
 
+-- vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
+-- vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
+local border = "rounded"
+
+
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
+    vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#00000000]],
+    vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#00000000]],
+    border = border,
 		width = 60,
   })
 
@@ -78,7 +85,7 @@ local function lsp_keymaps(bufnr)
     bufnr,
     "n",
     "gl",
-    '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>',
+    -- '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>',
     opts
   )
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
